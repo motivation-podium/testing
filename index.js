@@ -13,15 +13,15 @@ app.use(express.urlencoded({ extended: false }));
 
 require("dotenv/config");
 
-mongoose
-  .connect(process.env.MONGODB_URL)
-  .then(() => {
-    console.log("Mongodb connected");
-  })
-  .catch((err) => {
-    console.log({ err });
-    process.exit(1);
-  });
+// mongoose
+//   .connect(process.env.MONGODB_URL)
+//   .then(() => {
+//     console.log("Mongodb connected");
+//   })
+//   .catch((err) => {
+//     console.log({ err });
+//     process.exit(1);
+//   });
 
 app.listen(PORT);
 console.log("server is started ...");
