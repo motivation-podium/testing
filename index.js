@@ -22,7 +22,7 @@ app.get("/", (req, res) => {
   console.log("GET ROOT 200 ...");
 });
 
-app.get("/user",(req,res)=>{
+app.post("/user",(req,res)=>{
   // let {user} = req.body;
   // if(user){res.json(req.body);}
   // else{res.send("Nothing")}
