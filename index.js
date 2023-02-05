@@ -13,19 +13,18 @@ app.use(express.urlencoded({ extended: false }));
 
 require("dotenv/config");
 
-// mongoose
-//   .connect(process.env.MONGODB_URL)
-//   .then(() => {
-//     console.log("Mongodb connected");
-//   })
-//   .catch((err) => {
-//     console.log({ err });
-//     process.exit(1);
-//   });
 
-app.listen(PORT);
+
+app.listen(8080);
 console.log("server is started ...");
 app.get("/", (req, res) => {
   res.send("hi");
   console.log("GET ROOT 200 ...");
 });
+
+app.get("/user",(req,res)=>{
+  let {user} = req.body;
+  if(user){res.send(user);}
+  else{res.send("Nothing")}
+  console.log(user);
+})
