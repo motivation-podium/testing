@@ -23,8 +23,10 @@ app.get("/", (req, res) => {
 });
 
 app.get("/user",(req,res)=>{
-  let {user} = req.body;
-  if(user){res.send(user);}
-  else{res.send("Nothing")}
-  console.log(user);
+  // let {user} = req.body;
+  // if(user){res.json(req.body);}
+  // else{res.send("Nothing")}
+  console.log(req.body);
+  res.json(req.body);
+  console.log(req.query);
 })
